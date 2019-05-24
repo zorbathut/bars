@@ -2,63 +2,76 @@ pax:
   text: PAX Enforcer
   start: August 2006
   end: August 2012
+  height: -1
 
 dgm:
   text: Digital Game Museum
   start: January 2009
   end: May 2016
+  height: -2
 
 gdc:
   text: GDC CA
   start: March 2018
   end: March 2019
+  height: -1
 
 reddit:
   text: Subreddit Mod
   start: May 2018
   end: NOW
+  height: -2
 
 topcoder:
   text: Topcoder
   start: August 2001
   end: September 2004
+  height: 2
 
 snowblind:
   text: Snowblind
   start: June 2002
   end: January 2004
+  height: 1
 
 google:
   text: Google
   start: July 2004
   end: September 2006
+  height: 1
 
 qh:
   text: QuestHelper
   start: July 2008
   end: January 2010
+  height: 1
 
 mandible:
   text: Mandible Games
   start: September 2006
   end: January 2013
+  height: 2
 
 trion:
   text: Trion Worlds
   start: October 2010
   end: January 2017
+  height: 1
 
 ck:
   text: Crimson Keep
   start: September 2015
   end: November 2018
+  height: 2
 
 ludeon:
   text: Ludeon Studios
   start: February 2017
   end: June 2018
+  height: 1
 
 nope:
   text: Nope
   start: July 2018
   end: NOW
+  height: 1
