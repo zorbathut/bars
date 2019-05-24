@@ -17,7 +17,7 @@ gdc:
   height: -1
 
 reddit:
-  text: Subreddit Mod
+  text: Subreddit
   start: May 2018
   end: NOW
   height: -2
@@ -65,7 +65,7 @@ ck:
   height: 2
 
 ludeon:
-  text: Ludeon Studios
+  text: Ludeon
   start: February 2017
   end: June 2018
   height: 1
