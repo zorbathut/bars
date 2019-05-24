@@ -2,6 +2,7 @@ import strictyaml
 import svgwrite
 import datetime
 import dateutil
+import cairosvg
 
 with open('data.yaml', 'r') as f:
   raw = strictyaml.load(f.read())
@@ -21,16 +22,16 @@ class Element:
 
 items = [Element(**v.data) for (k, v) in raw.items()]
 
-dwg = svgwrite.Drawing(filename='result.svg', debug=True)
-
 leftmost_anchor = min([item.start for item in items])
-units_per_day = 250 / 365.25
+units_per_day = 150 / 365.25
 
 bar_height = 35
 bar_spacing = 40
 
 text_size = 30
 text_padding = 5
+
+dwg = svgwrite.Drawing(filename='result.svg', debug=True, viewBox=('0 0 ' + str((datetime.datetime.now() - leftmost_anchor).days * units_per_day + bar_spacing / 2) + ' ' + str(bar_spacing * 7)))
 
 gradient = dwg.linearGradient((0, 0), (0, "100%"))
 gradient.add_stop_color(0, "#000000", opacity=0)
@@ -39,7 +40,7 @@ gradient.add_stop_color(0.8, "#000000", opacity=0.5)
 gradient.add_stop_color(1, "#000000", opacity=0)
 dwg.defs.add(gradient)
 
-for year in range(2002, 2020):
+for year in range(2002, 2020, 2):
   pos = (datetime.datetime(year = year, month = 1, day = 1) - leftmost_anchor).days * units_per_day
   
   dwg.add(dwg.text(year, insert = (pos + text_padding, offset * bar_spacing + bar_height / 2), font_family = "Arial", font_size = text_size, alignment_baseline = "middle", fill = "#000000"))
@@ -54,6 +55,6 @@ for item in items:
     dwg.add(dwg.polyline([(end, heightanchor), (end + bar_height / 2, heightanchor + bar_height / 2), (end, heightanchor + bar_height)], fill = "#000000"))
   dwg.add(dwg.text(item.text, insert = (start + text_padding, heightanchor + bar_height / 2), font_family = "Arial", font_size = text_size, alignment_baseline = "middle", fill = "#ffffff"))
   
-  
+  dwg.save()
 
-dwg.save()
+cairosvg.svg2png(url='result.svg', write_to='result.png')
