@@ -23,7 +23,7 @@ class Element:
 items = [Element(**v.data) for (k, v) in raw.items()]
 
 leftmost_anchor = min([item.start for item in items])
-units_per_day = 150 / 365.25
+units_per_day = 140 / 365.25
 
 bar_height = 35
 bar_spacing = 40
@@ -40,7 +40,7 @@ gradient.add_stop_color(0.8, "#000000", opacity=0.5)
 gradient.add_stop_color(1, "#000000", opacity=0)
 dwg.defs.add(gradient)
 
-for year in range(2002, 2020, 2):
+for year in range(2002, 2023, 2):
   pos = (datetime.datetime(year = year, month = 1, day = 1) - leftmost_anchor).days * units_per_day
   
   dwg.add(dwg.text(year, insert = (pos + text_padding, offset * bar_spacing + bar_height / 2), font_family = "Arial", font_size = text_size, alignment_baseline = "middle", fill = "#000000"))

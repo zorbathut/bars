@@ -13,11 +13,11 @@ dgm:
 gdc:
   text: GDC CA
   start: March 2018
-  end: March 2019
+  end: NOW
   height: -1
 
 reddit:
-  text: Subreddit
+  text: Community
   start: May 2018
   end: NOW
   height: -2
@@ -70,8 +70,8 @@ ludeon:
   end: June 2018
   height: 1
 
-nope:
-  text: Nope
-  start: July 2018
+zoox:
+  text: Airship Syndicate
+  start: July 2019
   end: NOW
   height: 1
