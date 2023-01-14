@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bars"
+version = "0.1.0"
+description = ""
+authors = ["Ben Rog-Wilhelm <zorba-github@pavlovian.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+svgwrite = "^1.4.3"
+strictyaml = "^1.6.2"
+CairoSVG = "^2.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
