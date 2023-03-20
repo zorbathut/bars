@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.10"
 svgwrite = "^1.4.3"
 strictyaml = "^1.6.2"
-CairoSVG = "^2.5.2"
+CairoSVG = "^2.7.0"
 
 
 [build-system]
