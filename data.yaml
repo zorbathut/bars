@@ -16,7 +16,7 @@ gdc:
   end: NOW
   height: -1
 
-reddit:
+community:
   text: Community
   start: May 2018
   end: NOW
@@ -70,8 +70,21 @@ ludeon:
   end: June 2018
   height: 1
 
-nope:
-  text: Nope
+airship:
+  text: Airship Syndicate
   start: July 2019
-  end: NOW
+  end: March 2023
+  height: 2
+
+bitwise:
+  text: Zynga
+  start: March 2023
+  end: June 2024
   height: 1
+
+tsoh:
+  text: TSOH
+  start: October 2023
+  end: NOW
+  height: 2
+
